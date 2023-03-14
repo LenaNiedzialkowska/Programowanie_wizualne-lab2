@@ -12,9 +12,18 @@ namespace Programowanie_wizualne_lab2
 {
     public partial class Form2 : Form
     {
-        double cena = 0.00;
-        double cenaDysku = 0.00;
-        double cenaKarty = 0.00;
+        int cena = 0;
+        int cenaDysku = 0;
+        int cenaKarty = 0;
+        public int getCena()
+        {
+            return cena;
+        }
+
+        public void setCena(int nowaCena)
+        {
+            cena = nowaCena;
+        }
         public Form2()
         {
             InitializeComponent();
@@ -126,8 +135,7 @@ namespace Programowanie_wizualne_lab2
 
         private void buttonZapisz_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
-        
     }
 }

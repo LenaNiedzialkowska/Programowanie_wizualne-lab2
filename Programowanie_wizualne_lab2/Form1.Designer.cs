@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonKomputer = new System.Windows.Forms.Button();
             this.buttonMonitor = new System.Windows.Forms.Button();
             this.labelCena = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // buttonKomputer
@@ -59,10 +61,15 @@
             this.labelCena.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelCena.Location = new System.Drawing.Point(477, 203);
             this.labelCena.Name = "labelCena";
-            this.labelCena.Size = new System.Drawing.Size(121, 67);
+            this.labelCena.Size = new System.Drawing.Size(56, 67);
             this.labelCena.TabIndex = 2;
-            this.labelCena.Text = "0,00";
+            this.labelCena.Text = "0";
             this.labelCena.Click += new System.EventHandler(this.labelCena_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -74,6 +81,7 @@
             this.Controls.Add(this.buttonKomputer);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,5 +92,6 @@
         private Button buttonKomputer;
         private Button buttonMonitor;
         private Label labelCena;
+        private System.Windows.Forms.Timer timer1;
     }
 }
